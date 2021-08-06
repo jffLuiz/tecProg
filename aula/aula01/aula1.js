@@ -25,4 +25,5 @@ console.log(num)
 
 //Input de informações
 var usuario=prompt("qual é o seu nome? ")
+console.log(usuario)
 
