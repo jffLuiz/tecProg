@@ -55,3 +55,6 @@ console.log(exemplo.replace(/\w/g, "t"))// busca todos os caracter para alterar
 const up = texto=>texto.toUpperCase()
 console.log(`teste.... ${up("teste")}`)
 
+
+
+
