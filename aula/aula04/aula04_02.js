@@ -88,22 +88,21 @@ function soma4(a=1,b=1,c=1){
 console.log(soma4(), soma4(3), soma4(5,2,3), soma4(0,0,0))
 
 //Faça uma função que receba dois numeros inteiros e positivos por parametro ... retorne a soma dos N numeros inteiros extentes entre eles
-
-function ex01(a,b){
-    let result=0
-    while (result =! b){
-        result+=a
-        a++
+// resolução professor
+let somaN = function (inicial, final){
+    let soma=0
+    for (i=inicial+1; i<final; i++){
+        soma+=i
     }
-    return result
+    return soma
 }
-console.log(ex01(1,10))
+console.log(somaN(1,5))
 
-function ex01(a,b){
-    let result
-    for (i=0; a<b; i++){
-        result+=a+1
-    }
-    return result
+// faça uma função que leia cinco valores, determine e mostre o maior e o menor entre eles
+
+function maiorMenor(a,b,c,d,e){
+    menor=Math.min(a,b,c,d,e)
+    maior=Math.max(a,b,c,d,e)
+    return console.log(`menor: ${menor} e maior: ${maior}`)
 }
-console.log(ex01(1,3))
+maiorMenor(11,55,1554,10,22)
