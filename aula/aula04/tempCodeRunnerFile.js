@@ -1,11 +1,8 @@
-function sub(){
-    let sub=0
-    for (i in arguments){
-        sub-=arguments[i]
+function ex01(a,b){
+    let result
+    for (i=0; a<b; i++){
+        result+=a+1
     }
-    return sub
+    return result
 }
-console.log(sub(1))
-console.log(sub(1,2))
-console.log(sub(1,2,5))
-console.log(sub(1,2,5,-8))
+console.log(ex01(1,3))
