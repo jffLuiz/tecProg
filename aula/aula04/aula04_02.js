@@ -98,7 +98,7 @@ let somaN = function (inicial, final){
 }
 console.log(somaN(1,5))
 
-// faça uma função que leia cinco valores, determine e mostre o maior e o menor entre eles
+// ex: faça uma função que leia cinco valores, determine e mostre o maior e o menor entre eles
 
 function maiorMenor(a,b,c,d,e){
     menor=Math.min(a,b,c,d,e)
@@ -106,3 +106,23 @@ function maiorMenor(a,b,c,d,e){
     return console.log(`menor: ${menor} e maior: ${maior}`)
 }
 maiorMenor(11,55,1554,10,22)
+
+// resolução do professor
+let maior, menor
+
+function maiorMenor() {
+    maior = arguments[0]
+    menor = arguments[0]
+
+    for (i in arguments){
+        if (arguments[i] > maior){
+            maior = arguments[i]
+        }
+        if (arguments[i] < menor){
+            mmenor = arguments[i]
+        }
+    }
+}
+
+maiorMenor(11,55,1554,10,22)
+console.log(`menor: ${menor} e maior: ${maior}`)
