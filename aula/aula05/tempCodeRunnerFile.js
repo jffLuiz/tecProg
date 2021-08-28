@@ -1,15 +1,10 @@
-// função This e Bind
-const NPC = {
-    saudacao: 'olá aventureiro!!!',
-    oi() {
-        console.log(this.saudacao)
-    }
+soma = (x,y) => {return x + y}
+sub = (x,y) => {return x - y}
+
+resultado = (a, b, operacao = sub) =>{
+    console.log(operacao(a,b))
 }
 
-NPC.oi()
-
-let oi2 = NPC.oi
-oi2()
-
-let oi3 = NPC.oi.bind(NPC)
-oi3()
+resultado(1,1)
+resultado(1,1, soma)
+resultado(2,1, (x,y) => x*y)
