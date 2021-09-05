@@ -3,7 +3,7 @@ console.log('Hello Word');
 console.log("Hello Word!!!")
 
 
-//variaveis
+//variavei
 // 1 - let - variavel imutavel (não mosta endereço da memoria)
 // 2 - var - variavel de livre acesso
 

@@ -1,4 +1,4 @@
-/*// booleana
+// booleana
 
 let teste = false
 console.log(teste)
@@ -44,7 +44,7 @@ console.log(nome2 || "desconhecido")
 // && and
 // != diferente
 // == igual
-*/
+
 //Array
 const valores = [7.15, 8.1, 9.6]
 console.log(valores)
