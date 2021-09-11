@@ -1,18 +1,18 @@
 .Cartao {
     background-color: red;
-    border-radius: 4px;
+    border-radius: 10px;
     overflow: hidden;
     border: 3px solid red;
     margin: 10px;
 }
-.Titulo {
+.Cartao .Titulo {
     background-color: darkred;
     padding: 7px;
     display: flex;
     justify-content: center;
 }
 
-.Conteudo {
+.Cartao .Conteudo {
     background-color: silver;
     color: black;
     padding: 25px;
