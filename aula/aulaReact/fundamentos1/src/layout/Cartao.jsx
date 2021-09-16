@@ -1,5 +1,5 @@
 import React from "react"
-import '/Cartao.css'
+import '../layout/Cartao.css'
 
 const Cartao = props => {
     return (
