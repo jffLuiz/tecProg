@@ -5,13 +5,35 @@ import Componente3 from './components/FundBasico/TerceiroComp'
 import CompAleatorio from './components/FundBasico/Aleatório'
 import Cartao from './layout/Cartao'
 import './App.css'
+import Familia from "./components/FundBasico/Familia";
+import FamiliaMembro from "./components/FundBasico/FamiliaMembro";
+
 
 const  msg = <strong>'Olá React!!'</strong>
+
+
 
 const App = () => {
     return <div className="App">
                 <h2>Fundamentos</h2>
                 <div className="Cartoes">
+
+                    <Cartao
+                        titulo = "POO"
+                        color = "#8AA">
+                        <Familia sobrenome="Costa">
+                            <FamiliaMembro nome="Joao"/>
+                            <FamiliaMembro nome="Ana"/>
+                            <FamiliaMembro nome="Marcos"/>
+                        </Familia>
+                        <Familia sobrenome="Marques">
+                            <FamiliaMembro nome="Joao"/>
+                            <FamiliaMembro nome="Ana"/>
+                            <FamiliaMembro nome="Marcos"/>
+                        </Familia>
+
+                        
+                    </Cartao>
                     <Cartao
                         titulo = "teste cartão"
                         conteudo = "teste conteudo"
