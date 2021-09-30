@@ -7,6 +7,7 @@ import Cartao from './layout/Cartao'
 import './App.css'
 import Familia from "./components/FundBasico/Familia";
 import FamiliaMembro from "./components/FundBasico/FamiliaMembro";
+import Cliente from "./components/FundBasico/Cliente"
 
 
 const  msg = <strong>'Olá React!!'</strong>
@@ -18,6 +19,10 @@ const App = () => {
                 <h2>Fundamentos</h2>
                 <div className="Cartoes">
 
+                    <Cartao titulo="Lista Clientes" color="#A85">
+                        <Cliente></Cliente>
+                    </Cartao>
+                    
                     <Cartao
                         titulo = "POO"
                         color = "#8AA">
