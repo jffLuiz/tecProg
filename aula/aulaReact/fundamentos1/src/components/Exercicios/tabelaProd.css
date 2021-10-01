@@ -1,0 +1,20 @@
+.TabelaProdutos table {
+    width: 100%;
+}
+
+.TabelaProdutos th {
+    background-color: #283c25;
+    color: #fff;
+}
+
+.TabelaProdutos .par {
+    background-color: #aaa;
+}
+.TabelaProdutos .impar {
+    background-color: #eee;
+}
+
+.TabelaProdutos .alinha {
+    display: flex;
+    justify-content: center;
+}

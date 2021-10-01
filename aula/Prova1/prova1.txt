@@ -1,0 +1,1 @@
+Faça um layout de um site que efetue reserva de passagem aéreas de uma companhia. O layout deverá mostrar informações sobre voos (número, origem e destino) e o número de lugares disponíveis (Para 10 aviões diferentes). Para o armazenamento das informações pode-se utilizar vetores ou passagem por parâmetro (Fica a sua escolha)

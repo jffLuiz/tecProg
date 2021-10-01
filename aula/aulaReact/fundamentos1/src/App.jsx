@@ -8,6 +8,9 @@ import './App.css'
 import Familia from "./components/FundBasico/Familia";
 import FamiliaMembro from "./components/FundBasico/FamiliaMembro";
 import Cliente from "./components/FundBasico/Cliente"
+import Tabela from "./components/Exercicios/tabelaProd.jsx"
+import IndiretaPai from "./components/FundBasico/IndiretaPai.jsx"
+
 
 
 const  msg = <strong>'Olá React!!'</strong>
@@ -18,6 +21,15 @@ const App = () => {
     return <div className="App">
                 <h2>Fundamentos</h2>
                 <div className="Cartoes">
+
+                    <Cartao titulo="Comunicação indireta" color="#FB9">
+                        <IndiretaPai></IndiretaPai>
+                    </Cartao>
+
+                    <Cartao titulo="exercicio tabela" color="#BA0">
+                        <Tabela></Tabela>
+
+                    </Cartao>
 
                     <Cartao titulo="Lista Clientes" color="#A85">
                         <Cliente></Cliente>
