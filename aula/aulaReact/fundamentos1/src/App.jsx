@@ -10,6 +10,7 @@ import FamiliaMembro from "./components/FundBasico/FamiliaMembro";
 import Cliente from "./components/FundBasico/Cliente"
 import Tabela from "./components/Exercicios/tabelaProd.jsx"
 import IndiretaPai from "./components/FundBasico/IndiretaPai.jsx"
+import Input from "./components/Formulario/Input.jsx"
 
 
 
@@ -21,6 +22,12 @@ const App = () => {
     return <div className="App">
                 <h2>Fundamentos</h2>
                 <div className="Cartoes">
+
+                    <Cartao titulo="formulário" color="#d27">
+                        <Input></Input>
+                       
+                    </Cartao>
+
 
                     <Cartao titulo="Comunicação indireta" color="#FB9">
                         <IndiretaPai></IndiretaPai>
