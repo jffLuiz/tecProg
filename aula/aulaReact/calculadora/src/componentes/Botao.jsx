@@ -3,7 +3,9 @@ import './Botao.css'
 
 const Botao = props => {
     return (
-            <button className={`
+            <button
+                onClick = {e => props.click && props.click(props.label)} 
+                className={`
                 botao
                 ${props.operacao ? 'operacao' : ''}
                 ${props.dobro ? 'dobro' : ''}

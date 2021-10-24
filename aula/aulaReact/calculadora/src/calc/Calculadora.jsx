@@ -12,21 +12,62 @@ const estadoInicial = {
 }
 
 class Calculadora extends Component {
-
+    
     state = {
         ...estadoInicial
     }
 
     limparMemoria(){
-        console.log("Limpar")
+        this.setState({...estadoInicial})
     }
 
     setOperacao(op){
-        console.log(op)
+        if(this.state.atual === 0){
+            this.setState({op, atual: 1, limparDisplay: true})
+        } else {
+            const igualdade = op === '='
+            const opAtual = this.state.operacao
+
+            const valores = [...this.state.valores]
+
+            try {
+                valores[0] = eval(`${valores[0]} ${opAtual} ${valores[1]}`)
+            } catch (e) {
+                valores[0] = this.state.valores[0]
+            }
+
+            valores[1] = 0
+
+            this.setState({
+                valorDisplay: valores[0],
+                operacao: igualdade ? null : op,
+                atual: igualdade ? 0 : 1,
+                limparDisplay: !igualdade,
+                valores
+            })
+        }
     }
 
     addDigito(dig){
-        console.log(dig)
+         if (dig === '.' && this.state.valorDisplay.includes('.')){
+            return
+         }
+
+         const limparDisplay = this.state.valorDisplay ==='0' || this.state.limparDisplay
+
+         const valorAtual = limparDisplay ? '' : this.state.valorDisplay
+        
+         const valorDisplay = valorAtual + dig
+
+         this.setState({valorDisplay, limparDisplay: false})
+
+         if(dig !== '.'){
+            const i = this.state.atual
+            const novoValor = parseFloat(valorDisplay)
+            const valores = [...this.state.valores]
+            valores[i] = novoValor
+            this.setState({valores})
+         }
     }
 
     render(){
@@ -45,7 +86,7 @@ class Calculadora extends Component {
                     <Botao label="7" click={addDigito}/>
                     <Botao label="8" click={addDigito}/>
                     <Botao label="9" click={addDigito}/>
-                    <Botao label="x" click={setOperacao}  operacao/>
+                    <Botao label="*" click={setOperacao}  operacao/>
                     <Botao label="4" click={addDigito}/>
                     <Botao label="5" click={addDigito}/>
                     <Botao label="6" click={addDigito}/>
